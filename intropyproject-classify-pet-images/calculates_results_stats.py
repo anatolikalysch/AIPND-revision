@@ -78,7 +78,6 @@ def calculates_results_stats(results_dic):
     not_dogs_correct = 0
     all_img = len(results_dic)
 
-
     for key in results_dic:
         _, _, pc_match, is_dog_gt, is_dog_cl = results_dic[key]
         if is_dog_gt == 1:

@@ -41,7 +41,6 @@ def get_input_args():
     parser.add_argument('-a', '--arch', type=str, help="CNN architecture to be used", default='vgg')
     parser.add_argument('-f', '--dogfile', type=str, help='text file with dognames', default='dognames.txt')
     parser.add_argument('-v', '--verbose', help='increase output verbosity', action='store_true')
-    parser.add_argument('--arch_test', help='execute the available CNN architectures one by one', action='store_true')
 
     result = parser.parse_args()
     assert result.arch in ['resnet', 'alexnet', 'vgg']
