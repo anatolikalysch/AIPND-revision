@@ -74,4 +74,4 @@ def classify_images(images_dir, results_dic, model, strict_comparison=False):
         value.append(class_results)
         value.append(1 if value[0] in value[1] else 0)
 
-        results_dic[image].append(value)
+        results_dic[image] = (value)
