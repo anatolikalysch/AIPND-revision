@@ -43,4 +43,7 @@ def get_input_args():
     parser.add_argument('-v', '--verbose', help='increase output verbosity', action='store_true')
     parser.add_argument('--arch_test', help='execute the available CNN architectures one by one', action='store_true')
 
-    return parser.parse_args()
+    result = parser.parse_args()
+    assert result.arch in ['resnet', 'alexnet', 'vgg']
+
+    return result

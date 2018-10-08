@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/classify_images.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+# PROGRAMMER: Anatoli Kalysch
+# DATE CREATED: 08.10.2018
 # REVISED DATE: 
 # PURPOSE: Create a function classify_images that uses the classifier function 
 #          to create the classifier labels and then compares the classifier 
@@ -21,7 +21,8 @@
 #
 ##
 # Imports classifier function for using CNN to classify images 
-from classifier import classifier 
+from classifier import classifier
+from os import listdir, path
 
 # TODO 3: Define classify_images function below, specifically replace the None
 #       below by the function definition of the classify_images function. 
@@ -29,7 +30,7 @@ from classifier import classifier
 #       results_dic dictionary that is passed into the function is a mutable 
 #       data type so no return is needed.
 # 
-def classify_images(images_dir, results_dic, model):
+def classify_images(images_dir, results_dic, model, strict_comparison=False):
     """
     Creates classifier labels with classifier function, compares pet labels to 
     the classifier labels, and adds the classifier label and the comparison of 
@@ -65,4 +66,12 @@ def classify_images(images_dir, results_dic, model):
      Returns:
            None - results_dic is mutable data type so no return needed.         
     """
-    None 
+    # assertion if model is in resnet/alexnet/vgg is handled during the parsing of the cmd args
+    for image in listdir(images_dir):
+        class_results = classifier(path.join(images_dir, image), model).lower()
+        # results_dic[image] = results_dic[image].append(class_results, 1 if results_dic[image][0] == results_dic[image][1] else 0)
+        value = results_dic[image]
+        value.append(class_results)
+        value.append(1 if value[0] in value[1] else 0)
+
+        results_dic[image].append(value)
