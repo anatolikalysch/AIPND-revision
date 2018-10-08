@@ -30,7 +30,7 @@ def check_command_line_arguments(in_arg):
      Nothing - just prints to console  
     """
     if in_arg is None:
-        print("* Doesn't Check the Command Line Arguments because 'get_input_args' hasn't been defined.")
+        print("[-] Doesn't Check the Command Line Arguments because 'get_input_args' hasn't been defined.")
     else:
         # prints command line agrs
         print("Command Line Arguments:\n     dir =", in_arg.dir, 
@@ -49,7 +49,7 @@ def check_creating_pet_image_labels(results_dic):
      Nothing - just prints to console  
     """
     if results_dic is None:
-        print("* Doesn't Check the Results Dictionary because 'get_pet_labels' hasn't been defined.")
+        print("[-] Doesn't Check the Results Dictionary because 'get_pet_labels' hasn't been defined.")
     else:
         # Code to print 10 key-value pairs (or fewer if less than 10 images)
         # & makes sure there are 40 pairs, one for each file in pet_images/
@@ -96,9 +96,9 @@ def check_classifying_images(results_dic):
 
     """
     if results_dic is None:
-        print("* Doesn't Check the Results Dictionary because 'classify_images' hasn't been defined.")
+        print("[-] Doesn't Check the Results Dictionary because 'classify_images' hasn't been defined.")
     elif len(results_dic[next(iter(results_dic))]) < 2:
-        print("* Doesn't Check the Results Dictionary because 'classify_images' hasn't been defined.")
+        print("[-] Doesn't Check the Results Dictionary because 'classify_images' hasn't been defined.")
     else:
         # Code for checking classify_images -
         # Checks matches and not matches are classified correctly
@@ -161,9 +161,9 @@ def check_classifying_labels_as_dogs(results_dic):
 
     """
     if results_dic is None:
-        print("* Doesn't Check the Results Dictionary because 'adjust_results4_isadog' hasn't been defined.")
+        print("[-] Doesn't Check the Results Dictionary because 'adjust_results4_isadog' hasn't been defined.")
     elif len(results_dic[next(iter(results_dic))]) < 4 :
-        print("* Doesn't Check the Results Dictionary because 'adjust_results4_isadog' hasn't been defined.")
+        print("[-] Doesn't Check the Results Dictionary because 'adjust_results4_isadog' hasn't been defined.")
 
     else:
         # Code for checking adjust_results4_isadog -
@@ -234,7 +234,7 @@ def check_calculating_results(results_dic, results_stats_dic):
 
     """
     if results_stats_dic is None:
-        print("* Doesn't Check the Results Dictionary because 'calculates_results_stats' hasn't been defined.")
+        print("[-] Doesn't Check the Results Dictionary because 'calculates_results_stats' hasn't been defined.")
     else:
         # Code for checking results_stats_dic -
         # Checks calculations of counts & percentages BY using results_dic
@@ -298,13 +298,13 @@ def check_calculating_results(results_dic, results_stats_dic):
         pct_corr_breed = ( n_match_breed / n_pet_dog )*100
     
         # prints calculated statistics
-        print("\n ** Statistics from calculates_results_stats() function:")
+        print("\n [*] Statistics from calculates_results_stats() function:")
         print("N Images: {:2d}  N Dog Images: {:2d}  N NotDog Images: {:2d} \nPct Corr dog: {:5.1f} Pct Corr NOTdog: {:5.1f}  Pct Corr Breed: {:5.1f}".format(
               results_stats_dic['n_images'], results_stats_dic['n_dogs_img'],
               results_stats_dic['n_notdogs_img'], results_stats_dic['pct_correct_dogs'],
               results_stats_dic['pct_correct_notdogs'],
               results_stats_dic['pct_correct_breed']))
-        print("\n ** Check Statistics - calculated from this function as a check:")
+        print("\n [*] Check Statistics - calculated from this function as a check:")
         print("N Images: {:2d}  N Dog Images: {:2d}  N NotDog Images: {:2d} \nPct Corr dog: {:5.1f} Pct Corr NOTdog: {:5.1f}  Pct Corr Breed: {:5.1f}".format(
               n_images, n_pet_dog, n_pet_notd, pct_corr_dog, pct_corr_notdog,
               pct_corr_breed))

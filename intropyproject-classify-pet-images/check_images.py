@@ -67,27 +67,13 @@ def main():
     if in_arg.verbose:
         check_classifying_labels_as_dogs(results)
 
-
-    # TODO 5: Define calculates_results_stats function within the file calculates_results_stats.py
-    # This function creates the results statistics dictionary that contains a
-    # summary of the results statistics (this includes counts & percentages). This
-    # dictionary is returned from the function call as the variable results_stats    
-    # Calculates results of run and puts statistics in the Results Statistics
-    # Dictionary - called results_stats
     results_stats = calculates_results_stats(results)
 
     # Function that checks Results Statistics Dictionary using results_stats
     if in_arg.verbose:
         check_calculating_results(results, results_stats)
 
-    # TODO 6: Define print_results function within the file print_results.py
-    # Once the print_results function has been defined replace 'None' 
-    # in the function call with in_arg.arch  Once you have done the 
-    # replacements your function call should look like this: 
-    #      print_results(results, results_stats, in_arg.arch, True, True)
-    # Prints summary results, incorrect classifications of dogs (if requested)
-    # and incorrectly classified breeds (if requested)
-    print_results(results, results_stats, None, True, True)
+    print_results(results, results_stats, in_arg.arch, True, True)
 
     end_time = timer()
 

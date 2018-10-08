@@ -76,6 +76,7 @@ def calculates_results_stats(results_dic):
     dogs_correct = 0
     breed_correct = 0
     not_dogs_correct = 0
+
     all_img = len(results_dic)
 
     for key in results_dic:
@@ -92,6 +93,7 @@ def calculates_results_stats(results_dic):
                 not_dogs_correct += 1
 
     not_dogs = all_img - dogs_all
+    matches = dogs_correct + not_dogs_correct  # dogs and not dogs
 
     results_stats_dic['n_images'] = all_img
     results_stats_dic['n_dogs_img'] = dogs_all
@@ -100,8 +102,11 @@ def calculates_results_stats(results_dic):
     results_stats_dic['pct_correct_dogs'] = (dogs_correct / dogs_all) * 100
     results_stats_dic['pct_correct_notdogs'] = (not_dogs_correct / not_dogs) * 100
     results_stats_dic['pct_correct_breed'] = (breed_correct / dogs_all) * 100
+    results_stats_dic['pct_matches'] = (matches / all_img) * 100
 
     results_stats_dic['n_correct_dogs'] = dogs_correct
     results_stats_dic['n_correct_notdogs'] = not_dogs_correct
     results_stats_dic['n_correct_breed'] = breed_correct
+    results_stats_dic['n_matches'] = matches
+
     return results_stats_dic
