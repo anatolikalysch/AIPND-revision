@@ -77,7 +77,7 @@ def print_results(results_dic, results_stats_dic, model,
           '[+] Number of correctly classified dogs: {} ({:5.1f}%)\n'
           '[+] Number of correctly classified not dogs: {} ({:5.1f}%)\n'
           '[+] Number of correctly classified breeds: {} ({:5.1f}%)\n'
-          '[+] Number of matches (dogs and not dogs): {} ({:5.1f})\n'
+          '[+] Number of matches (dogs and not dogs): {} ({:5.1f}%)\n'
           .format(n_correct_dogs,
                   results_stats_dic['pct_correct_dogs'],
                   results_stats_dic['n_correct_notdogs'],

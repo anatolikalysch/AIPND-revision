@@ -69,7 +69,6 @@ def classify_images(images_dir, results_dic, model, strict_comparison=False):
     # assertion if model is in resnet/alexnet/vgg is handled during the parsing of the cmd args
     for image in listdir(images_dir):
         class_results = classifier(path.join(images_dir, image), model).lower()
-        # results_dic[image] = results_dic[image].append(class_results, 1 if results_dic[image][0] == results_dic[image][1] else 0)
         value = results_dic[image]
         value.append(class_results)
         value.append(1 if value[0] in value[1] else 0)
