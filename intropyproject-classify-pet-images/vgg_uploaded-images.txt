@@ -5,26 +5,26 @@ Command Line Arguments:
 
 Pet Image Label Dictionary has 4 key-value pairs.
 Below are 4 of them:
- 1 key:                     Dog_01.jpg  label:                        dog
- 2 key:                  Python_01.jpg  label:                     python
+ 1 key:                  Cookie_01.jpg  label:                     cookie
+ 2 key:                     Dog_01.jpg  label:                        dog
  3 key:                     Dog_02.jpg  label:                        dog
- 4 key:                  Cookie_01.jpg  label:                     cookie
+ 4 key:                  Python_01.jpg  label:                     python
 
      MATCH:
 
  NOT A MATCH:
 
+                 Cookie_01.jpg: 
+Real:                     cookie   Classifier:                          dough
+
                     Dog_01.jpg: 
 Real:                        dog   Classifier:                       leonberg
-
-                 Python_01.jpg: 
-Real:                     python   Classifier: boa constrictor, constrictor constrictor
 
                     Dog_02.jpg: 
 Real:                        dog   Classifier:                       leonberg
 
-                 Cookie_01.jpg: 
-Real:                     cookie   Classifier:                          dough
+                 Python_01.jpg: 
+Real:                     python   Classifier: boa constrictor, constrictor constrictor
 
 # Total Images 4 # Matches: 0 # NOT Matches: 4
 
@@ -32,20 +32,20 @@ Real:                     cookie   Classifier:                          dough
 
  NOT A MATCH:
 
+                 Cookie_01.jpg: 
+Real:                     cookie   Classifier:                          dough  
+PetLabelDog: 0  ClassLabelDog: 0
+
                     Dog_01.jpg: 
 Real:                        dog   Classifier:                       leonberg  
 PetLabelDog: 1  ClassLabelDog: 1
-
-                 Python_01.jpg: 
-Real:                     python   Classifier: boa constrictor, constrictor constrictor  
-PetLabelDog: 0  ClassLabelDog: 0
 
                     Dog_02.jpg: 
 Real:                        dog   Classifier:                       leonberg  
 PetLabelDog: 1  ClassLabelDog: 1
 
-                 Cookie_01.jpg: 
-Real:                     cookie   Classifier:                          dough  
+                 Python_01.jpg: 
+Real:                     python   Classifier: boa constrictor, constrictor constrictor  
 PetLabelDog: 0  ClassLabelDog: 0
 
 # Total Images 4 # Matches: 0 # NOT Matches: 4
@@ -66,7 +66,7 @@ The result statistics are:
 [+] Number of correctly classified dogs: 2 (100.0%)
 [+] Number of correctly classified not dogs: 2 (100.0%)
 [+] Number of correctly classified breeds: 0 (  0.0%)
-[+] Number of matches (dogs and not dogs): 0 (  0.0)
+[+] Number of matches (dogs and not dogs): 0 (  0.0%)
 
 [-] Incorectly classified dog images:
 
@@ -74,4 +74,4 @@ The result statistics are:
 	Dog_01.jpg
 	Dog_02.jpg
 
-[*] Total Elapsed Runtime: 00:00:2.55227
+[*] Total Elapsed Runtime: 00:00:2.52667

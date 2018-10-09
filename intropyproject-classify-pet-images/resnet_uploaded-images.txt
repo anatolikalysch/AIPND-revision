@@ -5,23 +5,23 @@ Command Line Arguments:
 
 Pet Image Label Dictionary has 4 key-value pairs.
 Below are 4 of them:
- 1 key:                     Dog_02.jpg  label:                        dog
- 2 key:                  Cookie_01.jpg  label:                     cookie
- 3 key:                  Python_01.jpg  label:                     python
+ 1 key:                  Cookie_01.jpg  label:                     cookie
+ 2 key:                  Python_01.jpg  label:                     python
+ 3 key:                     Dog_02.jpg  label:                        dog
  4 key:                     Dog_01.jpg  label:                        dog
 
      MATCH:
 
  NOT A MATCH:
 
-                    Dog_02.jpg: 
-Real:                        dog   Classifier:      saint bernard, st bernard
-
                  Cookie_01.jpg: 
 Real:                     cookie   Classifier:                        pretzel
 
                  Python_01.jpg: 
 Real:                     python   Classifier: boa constrictor, constrictor constrictor
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:      saint bernard, st bernard
 
                     Dog_01.jpg: 
 Real:                        dog   Classifier:   norwegian elkhound, elkhound
@@ -32,10 +32,6 @@ Real:                        dog   Classifier:   norwegian elkhound, elkhound
 
  NOT A MATCH:
 
-                    Dog_02.jpg: 
-Real:                        dog   Classifier:      saint bernard, st bernard  
-PetLabelDog: 1  ClassLabelDog: 1
-
                  Cookie_01.jpg: 
 Real:                     cookie   Classifier:                        pretzel  
 PetLabelDog: 0  ClassLabelDog: 0
@@ -43,6 +39,10 @@ PetLabelDog: 0  ClassLabelDog: 0
                  Python_01.jpg: 
 Real:                     python   Classifier: boa constrictor, constrictor constrictor  
 PetLabelDog: 0  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:      saint bernard, st bernard  
+PetLabelDog: 1  ClassLabelDog: 1
 
                     Dog_01.jpg: 
 Real:                        dog   Classifier:   norwegian elkhound, elkhound  
@@ -66,7 +66,7 @@ The result statistics are:
 [+] Number of correctly classified dogs: 2 (100.0%)
 [+] Number of correctly classified not dogs: 2 (100.0%)
 [+] Number of correctly classified breeds: 0 (  0.0%)
-[+] Number of matches (dogs and not dogs): 0 (  0.0)
+[+] Number of matches (dogs and not dogs): 0 (  0.0%)
 
 [-] Incorectly classified dog images:
 
@@ -74,4 +74,4 @@ The result statistics are:
 	Dog_02.jpg
 	Dog_01.jpg
 
-[*] Total Elapsed Runtime: 00:00:0.42228
+[*] Total Elapsed Runtime: 00:00:0.42863

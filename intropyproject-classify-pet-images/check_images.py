@@ -24,7 +24,7 @@
 
 # Imports python modules
 
-from time import sleep
+
 from timeit import default_timer as timer
 
 # Imports print functions that check the lab
@@ -37,6 +37,7 @@ from classify_images import classify_images
 from adjust_results4_isadog import adjust_results4_isadog
 from calculates_results_stats import calculates_results_stats
 from print_results import print_results
+from compare_results import table_comparison
 
 # Main program function defined below
 def main():
@@ -80,6 +81,10 @@ def main():
     print("\n[*] Total Elapsed Runtime: {:02d}:{:02d}:{}".format(int(tot_time/3600),  # hours
                                                          int(tot_time%3600/60),  # minutes
                                                          round(tot_time%3600%60, 5)))  # seconds
+
+    if in_arg.compare:
+        table_comparison(results_stats)
+
     
 
 # Call to main function to run the program
